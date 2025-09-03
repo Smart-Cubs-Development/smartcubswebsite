@@ -280,7 +280,6 @@ export default function Index() {
             </div>
 
             <div className="text-center">
-              <div className="bg-white rounded-2xl shadow-xl p-8">
     <div className="bg-white rounded-2xl shadow-xl p-8 h-full max-h-[650px] mx-auto flex flex-col justify-between">
       
       {/* Image box */}
