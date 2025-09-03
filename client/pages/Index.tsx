@@ -280,34 +280,33 @@ export default function Index() {
             </div>
 
             <div className="text-center">
-    <div className="bg-white rounded-2xl shadow-xl p-8 h-full max-h-[650px] mx-auto flex flex-col justify-between">
-      
-      {/* Image box */}
-      <div className="bg-gradient-to-br from-purple-100 via-blue-100 to-indigo-100 rounded-xl p-4 relative h-80 flex items-center justify-center">
-        <img 
-          src="/algo.png" 
-          alt="SmartCubs in Action" 
-          className="max-w-full max-h-full object-contain"
-        />
-      </div>
+              <div className="bg-white rounded-2xl shadow-xl p-8 h-full max-h-[650px] mx-auto flex flex-col justify-between">
+                
+                {/* Image box */}
+                <div className="bg-gradient-to-br from-purple-100 via-blue-100 to-indigo-100 rounded-xl p-4 relative h-80 flex items-center justify-center">
+                  <img 
+                    src="/algo.png" 
+                    alt="SmartCubs in Action" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
 
-      {/* Subtitle */}
-      <p className="mt-6 text-gray-700 text-[15px]">
-        Check out our smart software keeping both teachers and kids safe!
-      </p>
+                {/* Subtitle */}
+                <p className="mt-6 text-gray-700 text-[15px]">
+                  Check out our smart software keeping both teachers and kids safe!
+                </p>
 
-      {/* Button */}
-      <div className="mt-6">
-        <Button 
-          onClick={() => window.open("https://calendly.com/smartcubs", "_blank")}
-          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-xl"
-        >
-          Learn More About Our Features
-        </Button>
-      </div>
-    </div>
-  </div>
-
+                {/* Button */}
+                <div className="mt-6">
+                  <Button 
+                    onClick={() => window.open("https://calendly.com/smartcubs", "_blank")}
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-xl"
+                  >
+                    Learn More About Our Features
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -723,10 +722,10 @@ export default function Index() {
               © 2025 Smart Cubs Pte Ltd. All rights reserved.
             </div>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.linkedin.com/company/smartcubs" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="mailto:liong.ryan@mysmartcubs.com" className="text-gray-400 hover:text-white">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
