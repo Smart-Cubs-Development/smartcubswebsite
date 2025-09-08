@@ -44,7 +44,7 @@ export default function Index() {
               {/* A*STAR Logo */}
               <div className="text-center">
                 <div className="text-lg font-bold text-gray-400 mb-3">
-                  Supported by:
+                  In collaboration with:
                 </div>
                 <img
                   src={astar}
@@ -77,42 +77,46 @@ export default function Index() {
             </Button>
           </div>
 
-          {/* Video Preview */}
-          <div className="mt-20 max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-2xl p-8">
-              {/* Video Player Section */}
-              <div className="relative rounded-xl overflow-hidden aspect-video bg-gradient-to-br from-purple-100 to-blue-100">
-                {!showVideo ? (
-                  // The Preview State (what you see first)
-                  <div 
-                    className="absolute inset-0 flex items-center justify-center cursor-pointer"
-                    onClick={() => setShowVideo(true)}
-                  >
-                    <Button className="bg-purple-600 hover:bg-purple-700 w-16 h-16 rounded-full pointer-events-none">
-                      <Play className="h-8 w-8 text-white" />
-                    </Button>
+          {false && (
+            <>
+              {/* Video Preview */}
+              <div className="mt-20 max-w-4xl mx-auto">
+                <div className="bg-white rounded-2xl shadow-2xl p-8">
+                  {/* Video Player Section */}
+                  <div className="relative rounded-xl overflow-hidden aspect-video bg-gradient-to-br from-purple-100 to-blue-100">
+                    {!showVideo ? (
+                      // The Preview State (what you see first)
+                      <div 
+                        className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                        onClick={() => setShowVideo(true)}
+                      >
+                        <Button className="bg-purple-600 hover:bg-purple-700 w-16 h-16 rounded-full pointer-events-none">
+                          <Play className="h-8 w-8 text-white" />
+                        </Button>
+                      </div>
+                    ) : (
+                      // The Video Player State (what you see after clicking)
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=r3_WtaPq-c40cY3I"
+                        title="AI Assistant Video Preview"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    )}
                   </div>
-                ) : (
-                  // The Video Player State (what you see after clicking)
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=r3_WtaPq-c40cY3I"
-                    title="AI Assistant Video Preview"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                )}
-              </div>
-              
-              {/* Description Text Section - Now safely outside */}
-              <div className="mt-4 text-center">
-                <div className="text-gray-600 text-sm">
-                  AI Assistant Observing Preschool Classroom
+                  
+                  {/* Description Text Section - Now safely outside */}
+                  <div className="mt-4 text-center">
+                    <div className="text-gray-600 text-sm">
+                      AI Assistant Observing Preschool Classroom
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
       </section>
 
@@ -129,8 +133,8 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center justify-items-center max-w-5xl mx-auto">
+            <div className="space-y-8 md:col-span-2 w-full max-w-2xl mx-auto">
               {/* Problem 1 */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-6">
                 <div className="flex items-start gap-4">
@@ -184,15 +188,15 @@ export default function Index() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="bg-gray-100 rounded-2xl h-96 flex items-center justify-center">
+            {/* <div className="bg-gray-100 rounded-2xl h-96 flex items-center justify-center">
               <p className="text-gray-500 text-center px-6">
                 add some image of some teachers and kids interaction in the
                 preschool
               </p>
-            </div>
+            </div> */}
           </div>
-        </div>
       </section>
 
       {/* Solutions Section */}
@@ -214,7 +218,7 @@ export default function Index() {
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="bg-purple-100 rounded-lg p-3">
-                    <div className="h-6 w-6 bg-purple-600 rounded"></div>
+                    <Heart className="h-6 w-6 text-purple-600" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-2">
@@ -276,24 +280,28 @@ export default function Index() {
             </div>
 
             <div className="text-center">
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <div className="bg-gradient-to-br from-purple-100 via-blue-100 to-indigo-100 rounded-xl p-24 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center">
-                      <Camera className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <div className="mt-16">
-                    <div className="text-gray-600 text-sm mb-4">
-                      SmartCubs in Action
-                    </div>
-                    <div className="text-gray-500 text-xs">
-                      AI Detection & Auto-Reporting dashboard or sample report
-                    </div>
-                  </div>
+              <div className="bg-white rounded-2xl shadow-xl p-8 h-full max-h-[650px] mx-auto flex flex-col justify-between">
+                
+                {/* Image box */}
+                <div className="bg-gradient-to-br from-purple-100 via-blue-100 to-indigo-100 rounded-xl p-4 relative h-80 flex items-center justify-center">
+                  <img 
+                    src="/algo.png" 
+                    alt="SmartCubs in Action" 
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
-                <div className="mt-8">
-                  <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-xl">
+
+                {/* Subtitle */}
+                <p className="mt-6 text-gray-700 text-[15px]">
+                  Check out our smart software keeping both teachers and kids safe!
+                </p>
+
+                {/* Button */}
+                <div className="mt-6">
+                  <Button 
+                    onClick={() => window.open("https://calendly.com/smartcubs", "_blank")}
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-xl"
+                  >
                     Learn More About Our Features
                   </Button>
                 </div>
@@ -369,6 +377,7 @@ export default function Index() {
       </section>
 
       {/* Trusted By Section */}
+      {false && (
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-12">
@@ -439,7 +448,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-
+      )}
       {/* Research Partner Section */}
       <section className="py-16 bg-gray-200">
         <div className="max-w-7xl mx-auto px-8 text-center">
@@ -497,7 +506,7 @@ export default function Index() {
               <div className="border-t border-gray-200 pt-4">
                 <div className="font-bold text-gray-900">Ms. Johnson</div>
                 <div className="text-gray-500 text-sm">
-                  Lead Teacher, Sunshine Preschool
+                  Lead Teacher
                 </div>
               </div>
               <div className="absolute top-6 right-6 text-purple-200">
@@ -530,7 +539,7 @@ export default function Index() {
               <div className="border-t border-gray-200 pt-4">
                 <div className="font-bold text-gray-900">David Chen</div>
                 <div className="text-gray-500 text-sm">
-                  Preschool Director, Little Learners
+                  Preschool Director
                 </div>
               </div>
               <div className="absolute top-6 right-6 text-purple-200">
@@ -563,7 +572,7 @@ export default function Index() {
               <div className="border-t border-gray-200 pt-4">
                 <div className="font-bold text-gray-900">Sarah Martinez</div>
                 <div className="text-gray-500 text-sm">
-                  Teacher, Rainbow Kids Academy
+                  Teacher
                 </div>
               </div>
               <div className="absolute top-6 right-6 text-purple-200">
@@ -612,20 +621,21 @@ export default function Index() {
 
           <div className="border-t border-gray-200 pt-8">
             <div className="flex justify-center items-center gap-16 opacity-60">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="text-xl font-bold text-gray-400">500+</div>
                 <div className="text-sm text-gray-500">Teachers</div>
               </div>
               <div className="text-center">
                 <div className="text-xl font-bold text-gray-400">50+</div>
                 <div className="text-sm text-gray-500">Schools</div>
-              </div>
+              </div> */}
               <div className="text-center">
                 <div className="text-xl font-bold text-gray-400">99.9%</div>
                 <div className="text-sm text-gray-500">Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-sm text-gray-500">Compliant</div>
+              <div className="text-xl font-bold text-gray-400">Compliant</div>
+              <div className="text-sm text-gray-500">with PDPA</div>
               </div>
             </div>
           </div>
@@ -653,7 +663,7 @@ export default function Index() {
             </div>
 
             {/* Links */}
-            <div className="grid grid-cols-2 gap-8">
+            {/* <div className="grid grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold mb-4 underline">Company</h4>
                 <ul className="space-y-2 text-gray-300">
@@ -704,7 +714,7 @@ export default function Index() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="border-t border-gray-700 pt-8 flex justify-between items-center">
@@ -712,10 +722,10 @@ export default function Index() {
               © 2025 Smart Cubs Pte Ltd. All rights reserved.
             </div>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.linkedin.com/company/smartcubs" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="mailto:liong.ryan@mysmartcubs.com" className="text-gray-400 hover:text-white">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
